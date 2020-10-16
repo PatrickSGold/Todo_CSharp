@@ -1,0 +1,6 @@
+C:\Users\Patri\source\repos\Todo\Todo.Data\bin\Debug\Todo.Data.dll
+C:\Users\Patri\source\repos\Todo\Todo.Data\bin\Debug\Todo.Data.pdb
+C:\Users\Patri\source\repos\Todo\Todo.Data\obj\Debug\Todo.Data.csprojAssemblyReference.cache
+C:\Users\Patri\source\repos\Todo\Todo.Data\obj\Debug\Todo.Data.csproj.CoreCompileInputs.cache
+C:\Users\Patri\source\repos\Todo\Todo.Data\obj\Debug\Todo.Data.dll
+C:\Users\Patri\source\repos\Todo\Todo.Data\obj\Debug\Todo.Data.pdb
