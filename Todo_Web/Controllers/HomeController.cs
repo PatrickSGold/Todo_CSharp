@@ -3,23 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Todo.Data.Services;
 
 namespace Todo_Web.Controllers
 {
     public class HomeController : Controller
     {
-        ITodoData db;
-
-        public HomeController()
-        {
-            db = new InMemoryData();
-        }
-
         public ActionResult Index()
         {
-            var model = db.GetAll();
-            return View(model);
+            return View();
         }
 
         public ActionResult About()
