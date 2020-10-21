@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Todo.Data.Models.TodoTask> 
+﻿@model Todo_Web.Models.GreetingViewModel
 
 @{
     ViewBag.Title = "Home Page";
@@ -8,11 +8,4 @@
     <h1>ASP.NET</h1>
 </div>
 
-<ul>
-    @foreach (var todo in Model)
-    {
-    <li>
-        @todo.TaskName
-    </li>
-    }
-</ul>
+<ul>@Model.Message</ul>

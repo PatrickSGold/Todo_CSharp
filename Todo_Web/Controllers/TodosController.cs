@@ -21,5 +21,17 @@ namespace Todo_Web.Controllers
             var model = db.GetAll();
             return View(model);
         }
+
+        public ActionResult Create()
+        {
+
+            return View();
+        }
+
+        public ActionResult Details()
+        {
+
+            return View();
+        }
     }
 }
