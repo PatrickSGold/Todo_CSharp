@@ -13,9 +13,9 @@ namespace Todo_Web.Controllers
     {
         ITodoData db;
 
-        public HomeController()
+        public HomeController(ITodoData db)
         {
-            db = new InMemoryData();
+            this.db = db;
         }
 
         public ActionResult Index()
