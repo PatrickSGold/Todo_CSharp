@@ -196,6 +196,7 @@
     <Content Include="Views\Todos\Index.cshtml" />
     <Content Include="Views\Todos\Create.cshtml" />
     <Content Include="Views\Todos\Details.cshtml" />
+    <Content Include="Views\Todos\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -31,6 +31,10 @@ namespace Todo_Web.Controllers
         public ActionResult Details(int id)
         {
             var model = db.Get(id);
+            if(model == null)
+            {
+                return View("NotFound");
+            }
             return View(model);
         }
     }
