@@ -9,11 +9,11 @@ namespace Todo_Web.Controllers
 {
     public class TodosController : Controller
     {
-        ITodoData db;
+        private readonly ITodoData db;
 
-        public TodosController()
+        public TodosController(ITodoData db)
         {
-            db = new InMemoryData();
+            this.db = db;
         }
         // GET: Todos
         public ActionResult Index()
@@ -28,10 +28,10 @@ namespace Todo_Web.Controllers
             return View();
         }
 
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-
-            return View();
+            var model = db.Get(id);
+            return View(model);
         }
     }
 }

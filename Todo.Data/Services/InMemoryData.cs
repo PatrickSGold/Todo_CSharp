@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Todo.Data.Models;
 
 namespace Todo.Data.Services
@@ -17,7 +18,12 @@ namespace Todo.Data.Services
                 new TodoTask { Id = 3, TaskName = "Sleep", TaskDescription = "zzZZzzZZzZ for 6-8 hrs" }
                 };
         }
-        
+
+        public object Get(int id)
+        {
+            return todoTasks.FirstOrDefault(r => r.Id == id);
+        }
+
         public IEnumerable<TodoTask> GetAll()
         {
             return todoTasks;

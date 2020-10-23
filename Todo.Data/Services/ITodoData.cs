@@ -9,5 +9,6 @@ namespace Todo.Data.Services
     public interface ITodoData
     {
         IEnumerable<TodoTask> GetAll();
+        object Get(int id);
     }
 }
