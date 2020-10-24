@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Todo.Data.Models;
 using Todo.Data.Services;
 
 namespace Todo_Web.Controllers
@@ -15,19 +16,15 @@ namespace Todo_Web.Controllers
         {
             this.db = db;
         }
-        // GET: Todos
+        
+        [HttpGet]
         public ActionResult Index()
         {
             var model = db.GetAll();
             return View(model);
         }
 
-        public ActionResult Create()
-        {
-
-            return View();
-        }
-
+        [HttpGet]
         public ActionResult Details(int id)
         {
             var model = db.Get(id);
@@ -36,6 +33,19 @@ namespace Todo_Web.Controllers
                 return View("NotFound");
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(TodoTask todo)
+        {
+            db.Add(todo);
+            return View();
         }
     }
 }

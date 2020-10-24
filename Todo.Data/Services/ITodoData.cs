@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace Todo.Data.Services
     public interface ITodoData
     {
         IEnumerable<TodoTask> GetAll();
-        object Get(int id);
+        TodoTask Get(int id);
+        void Add(TodoTask todo);
     }
 }

@@ -19,9 +19,10 @@ namespace Todo.Data.Services
                 };
         }
 
-        public object Get(int id)
+        public void Add(TodoTask todo)
         {
-            return todoTasks.FirstOrDefault(r => r.Id == id);
+            todoTasks.Add(todo);
+            todo.Id = todoTasks.Max(t => t.Id) + 1;
         }
 
         public IEnumerable<TodoTask> GetAll()
@@ -29,6 +30,10 @@ namespace Todo.Data.Services
             return todoTasks;
         }
 
+        TodoTask ITodoData.Get(int id)
+        {
+            return todoTasks.FirstOrDefault(r => r.Id == id);
+        }
     }
  }
 
