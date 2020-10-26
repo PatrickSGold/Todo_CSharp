@@ -25,14 +25,25 @@ namespace Todo.Data.Services
             todo.Id = todoTasks.Max(t => t.Id) + 1;
         }
 
+        public TodoTask Get(int id)
+        {
+            return todoTasks.Find(t => t.Id == id);
+        }
+
         public IEnumerable<TodoTask> GetAll()
         {
             return todoTasks;
         }
 
-        TodoTask ITodoData.Get(int id)
+        public void Update(TodoTask todo)
         {
-            return todoTasks.FirstOrDefault(r => r.Id == id);
+            var existing = Get(todo.Id);
+
+            if(existing != null)
+            {
+                existing.TaskName = todo.TaskName;
+                existing.TaskDescription = todo.TaskDescription;
+            }
         }
     }
  }

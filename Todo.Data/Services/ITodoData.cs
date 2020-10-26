@@ -12,5 +12,6 @@ namespace Todo.Data.Services
         IEnumerable<TodoTask> GetAll();
         TodoTask Get(int id);
         void Add(TodoTask todo);
+        void Update(TodoTask todo);
     }
 }
