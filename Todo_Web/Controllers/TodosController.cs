@@ -48,7 +48,7 @@ namespace Todo_Web.Controllers
             if (ModelState.IsValid)
             {
                 db.Add(todo);
-                return View();
+                return RedirectToAction("Index");
             }
             return View();
         }
