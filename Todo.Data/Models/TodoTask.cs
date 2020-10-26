@@ -16,8 +16,6 @@ namespace Todo.Data.Models
         
         public string TaskDescription { get; set; }
         
-        public DateTime Deadline { get; set; }
-        
         public bool Completed { get; set; }
     }
 }
