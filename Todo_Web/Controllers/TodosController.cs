@@ -42,6 +42,7 @@ namespace Todo_Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(TodoTask todo)
         {
             db.Add(todo);
