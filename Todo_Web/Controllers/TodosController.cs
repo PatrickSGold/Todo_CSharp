@@ -45,7 +45,11 @@ namespace Todo_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(TodoTask todo)
         {
-            db.Add(todo);
+            if (ModelState.IsValid)
+            {
+                db.Add(todo);
+                return View();
+            }
             return View();
         }
     }
