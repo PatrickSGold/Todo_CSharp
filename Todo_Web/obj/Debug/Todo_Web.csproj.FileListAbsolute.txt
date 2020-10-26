@@ -99,3 +99,8 @@ C:\Users\Patri\source\repos\Todo\Todo_Web\bin\System.Memory.xml
 C:\Users\Patri\source\repos\Todo\Todo_Web\bin\System.Numerics.Vectors.xml
 C:\Users\Patri\source\repos\Todo\Todo_Web\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Patri\source\repos\Todo\Todo_Web\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Patri\source\repos\Todo\Todo_Web\bin\EntityFramework.dll
+C:\Users\Patri\source\repos\Todo\Todo_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Patri\source\repos\Todo\Todo_Web\bin\Todo.Data.dll.config
+C:\Users\Patri\source\repos\Todo\Todo_Web\bin\EntityFramework.xml
+C:\Users\Patri\source\repos\Todo\Todo_Web\bin\EntityFramework.SqlServer.xml

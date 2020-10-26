@@ -14,9 +14,12 @@ namespace Todo_Web
         internal static void RegisterContainer()
         {
             var builder = new ContainerBuilder();
+
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            builder.RegisterType<InMemoryData>()
-                .As<ITodoData>();
+            builder.RegisterType<SqlTodoData>()
+                .As<ITodoData>()
+                .InstancePerRequest();
+            builder.RegisterType<TodoDbContext>().InstancePerRequest();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

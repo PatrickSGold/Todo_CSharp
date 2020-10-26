@@ -25,6 +25,15 @@ namespace Todo.Data.Services
             todo.Id = todoTasks.Max(t => t.Id) + 1;
         }
 
+        public void Delete(int id)
+        {
+            var todo = Get(id);
+            if (todo != null)
+            {
+                todoTasks.Remove(todo);
+            }
+        }
+
         public TodoTask Get(int id)
         {
             return todoTasks.Find(t => t.Id == id);

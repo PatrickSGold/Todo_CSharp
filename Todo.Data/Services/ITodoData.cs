@@ -13,5 +13,6 @@ namespace Todo.Data.Services
         TodoTask Get(int id);
         void Add(TodoTask todo);
         void Update(TodoTask todo);
+        void Delete(int id);
     }
 }
